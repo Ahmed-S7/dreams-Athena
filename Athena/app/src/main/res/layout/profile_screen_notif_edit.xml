@@ -20,22 +20,21 @@
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Switch
         android:id="@+id/notify_if_not_chosen"
         android:layout_width="352dp"
         android:layout_height="27dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"
         android:elevation="21dp"
         android:showText="false"
         android:text="Notify when not chosen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notify_if_chosen" />
 
@@ -43,8 +42,8 @@
         android:id="@+id/notify_if_chosen"
         android:layout_width="352dp"
         android:layout_height="27dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:elevation="21dp"
         android:text="Notify when chosen"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,12 +55,12 @@
         android:layout_height="27dp"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="396dp"
+        android:layout_marginBottom="372dp"
         android:elevation="21dp"
         android:text="Warn event requires geolocation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
@@ -69,7 +68,7 @@
         android:layout_width="352dp"
         android:layout_height="27dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="434dp"
+        android:layout_marginBottom="428dp"
         android:elevation="21dp"
         android:text="Recieve notification from others"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,40 +89,41 @@
         app:layout_constraintVertical_bias="0.033"
         app:srcCompat="@drawable/profilepicturebutton" />
 
+
     <TextView
         android:id="@+id/bar2"
         android:layout_width="414dp"
         android:layout_height="61dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="4dp"
         android:background="#93BDB6"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image2"
-        android:layout_width="217dp"
-        android:layout_height="198dp"
+        android:layout_width="183dp"
+        android:layout_height="148dp"
         android:layout_gravity="center"
         android:elevation="2dp"
         app:civ_border_color="@android:color/black"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.11"
         tools:context=".EntrantAndOrganizerFragments.profileNotiEditFragment" />
 
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="58dp"
         android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -145,7 +145,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <Switch
         android:id="@+id/switch1"

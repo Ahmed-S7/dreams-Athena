@@ -9,24 +9,13 @@
 
     <ListView
         android:id="@+id/admin_events_list"
-        android:layout_width="match_parent"
-        android:layout_height="624dp"
+        android:layout_width="391dp"
+        android:layout_height="588dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.816" />
 
-    <TextView
-        android:id="@+id/app_events_list_title"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="7dp"
-        android:text="App Events Show here"
-        app:layout_constraintBottom_toTopOf="@+id/admin_events_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

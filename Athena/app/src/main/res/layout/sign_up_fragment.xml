@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editNumberReg"
@@ -75,7 +75,7 @@
         android:id="@+id/editNameReg"
         android:layout_width="288dp"
         android:layout_height="52dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="148dp"
         android:ems="10"
         android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,11 +89,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginEnd="132dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="@color/positive_button_color"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="@+id/profileName"
         app:layout_constraintEnd_toEndOf="@+id/profileName"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/profileName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

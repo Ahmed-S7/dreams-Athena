@@ -20,62 +20,75 @@
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <Switch
         android:id="@+id/notify_if_not_chosen"
         android:layout_width="352dp"
         android:layout_height="27dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="17dp"
         android:elevation="21dp"
         android:showText="false"
         android:text="Notify when not chosen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notify_if_chosen" />
+        app:layout_constraintBottom_toTopOf="@+id/geolocation_warn"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/notify_if_chosen"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Switch
         android:id="@+id/notify_if_chosen"
         android:layout_width="352dp"
         android:layout_height="27dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
         android:elevation="21dp"
         android:text="Notify when chosen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2"
+        app:layout_constraintVertical_bias="0.026" />
 
     <Switch
         android:id="@+id/geolocation_warn"
         android:layout_width="352dp"
         android:layout_height="27dp"
         android:layout_marginStart="28dp"
+        android:layout_marginTop="158dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="396dp"
+        android:layout_marginBottom="272dp"
         android:elevation="21dp"
         android:text="Warn event requires geolocation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <Switch
         android:id="@+id/notifs_from_others"
         android:layout_width="352dp"
         android:layout_height="27dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="434dp"
+        android:layout_marginBottom="352dp"
         android:elevation="21dp"
         android:text="Recieve notification from others"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/notify_if_chosen"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/profile_picture_button2"
@@ -113,9 +126,10 @@
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.175"
         tools:context=".EntrantAndOrganizerFragments.profileNotiEditFragment" />
 
     <ImageButton

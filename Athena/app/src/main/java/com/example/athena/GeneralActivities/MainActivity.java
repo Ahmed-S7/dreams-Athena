@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.Manifest;
+import android.provider.Settings;
 import android.util.Log;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -72,6 +73,41 @@ public class MainActivity extends AppCompatActivity {
                     startService(notificationIntent);
                 }
             });
+        }else{
+            String deviceID = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+            db.collection("Users").document(deviceID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("deviceID", deviceID);
+                    if (task.getResult().exists()) {
+                        HomeScreen homeScreen = new HomeScreen();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+                        FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        homeScreen.setArguments(bundle);
+                        transaction.replace(R.id.content_layout, homeScreen); // Replace with your container ID
+                        transaction.commit();
+                    } else {
+                        SignUpFragment signUp = new SignUpFragment();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+                        FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        signUp.setArguments(bundle);
+                        transaction.replace(R.id.content_layout, signUp); // Replace with your container ID
+                        transaction.commit();
+                    }
+
+                    // Notification setup
+                    requestNotificationPermission();
+
+                    Intent notificationIntent = new Intent(MainActivity.this, NotificationService.class);
+                    notificationIntent.putExtra("deviceId", deviceID);
+
+                    startService(notificationIntent);
+                }
+            });
+
+
         }
     }
 

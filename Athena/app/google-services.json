@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "607497986646",
-    "project_id": "privateproject-32527",
-    "storage_bucket": "privateproject-32527.firebasestorage.app"
+    "project_number": "887034232286",
+    "project_id": "firstappproject-9e34e",
+    "storage_bucket": "firstappproject-9e34e.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:607497986646:android:4564c893110b6a90e391f7",
+        "mobilesdk_app_id": "1:887034232286:android:1c3c404fa3c52e7981b14f",
         "android_client_info": {
           "package_name": "com.example.athena"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBToRppaE1kYF89y6wxymCI2EX2cMnjQXU"
+          "current_key": "AIzaSyAc0XfA_Uoy1Q7LoKgnDJNGX7vthF8mLHA"
         }
       ],
       "services": {

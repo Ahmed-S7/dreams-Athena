@@ -20,6 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.athena.AdminFragments.AdminBrowseFacilities;
+import com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails.CreateFacility;
+import com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails.OrgFacilityDetails;
 import com.example.athena.EntrantAndOrganizerFragments.eventCreation.CreateEvent;
 import com.example.athena.Firebase.UserDB;
 import com.example.athena.AdminFragments.AdminProfileBrowse;
@@ -239,6 +241,7 @@ public class HomeScreen extends Fragment {
             public void onClick(View view) {
                 ///Removes the child fragment so that you cannot click any of the buttons that were on the previous page
                 removeChildFragment();
+                profilePictureButton.setVisibility(View.INVISIBLE);
                 displayNewFrag(new ViewProfileFragment(), bundle);
             }
         });

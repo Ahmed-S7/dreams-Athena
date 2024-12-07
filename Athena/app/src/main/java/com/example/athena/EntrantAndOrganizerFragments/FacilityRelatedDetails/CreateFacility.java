@@ -1,6 +1,7 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails;
 
 import android.os.Bundle;
+
 import com.example.athena.Firebase.FacilitiesDB;
 
 import androidx.annotation.NonNull;

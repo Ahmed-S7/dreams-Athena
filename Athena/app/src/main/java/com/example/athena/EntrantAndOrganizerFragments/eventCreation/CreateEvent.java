@@ -130,41 +130,7 @@ public class CreateEvent extends Fragment implements DateDialog.datePickerListen
             }
         });
 
-    eventNameText.addTextChangedListener(new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            event.setEventName(s.toString());
-        }
-    });
-
-    descriptionText.addTextChangedListener(new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            event.setEventDescription(s.toString());
-        }
-    });
-
-    participantsText.addTextChangedListener(new TextWatcher() {
+        eventNameText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -177,48 +143,95 @@ public class CreateEvent extends Fragment implements DateDialog.datePickerListen
 
             @Override
             public void afterTextChanged(Editable s) {
-                event.setMaxParticipants(Integer.valueOf(s.toString()));
+                event.setEventName(s.toString());
             }
         });
 
-    geoRequireBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            event.setGeoRequire(isChecked);
-        }
-    });
+        descriptionText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-    eventDateText.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            datePicker.setTextField("eventDate");
-            datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
-        }
-    });
+            }
 
-    regStartText.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            datePicker.setTextField("regStart");
-            datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
-        }
-    });
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-    regEndText.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            datePicker.setTextField("regEnd");
-            datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
-        }
-    });
+            }
 
-    upload.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            openGallery();
-        }
-    });
-}
+            @Override
+            public void afterTextChanged(Editable s) {
+                event.setEventDescription(s.toString());
+            }
+        });
+
+        participantsText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+            //Partially derived from ChatGPT
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    String input = s.toString();
+                    if (!input.isEmpty()) {
+                        int participants = Integer.parseInt(input);
+                        if (participants > 0) { // Optional: Ensure it's positive
+                            event.setMaxParticipants(participants);
+                        } else {
+                            Toast.makeText(getContext(), "Enter a valid positive number.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getContext(), "Invalid number or too large.", Toast.LENGTH_SHORT).show();
+                    event.setMaxParticipants(0); // Reset to default
+                }
+            }
+        });
+
+        geoRequireBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                event.setGeoRequire(isChecked);
+            }
+        });
+
+        eventDateText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker.setTextField("eventDate");
+                datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
+            }
+        });
+
+        regStartText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker.setTextField("regStart");
+                datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
+            }
+        });
+
+        regEndText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker.setTextField("regEnd");
+                datePicker.show(getActivity().getSupportFragmentManager(), "datePicker");
+            }
+        });
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });
+    }
 
     public void openGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

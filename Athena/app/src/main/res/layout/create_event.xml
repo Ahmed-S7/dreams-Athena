@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/UIBox"
-        android:layout_width="284dp"
-        android:layout_height="448dp"
+        android:layout_width="294dp"
+        android:layout_height="493dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -38,21 +38,20 @@
         android:id="@+id/eventName"
         android:layout_width="212dp"
         android:layout_height="40dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Event Name"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/eventDate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/UIBox" />
 
     <EditText
         android:id="@+id/participants"
-        android:layout_width="129dp"
-        android:layout_height="50dp"
+        android:layout_width="131dp"
+        android:layout_height="46dp"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="276dp"
         android:ems="10"
@@ -60,30 +59,32 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/description"
-        android:layout_width="210dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="196dp"
+        android:layout_width="211dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="204dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="@+id/UIBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regDateEnd"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <EditText
         android:id="@+id/regDateEnd"
-        android:layout_width="209dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="364dp"
         android:ems="10"
         android:focusable="false"
@@ -91,38 +92,37 @@
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventDate"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/regDateStart" />
 
     <EditText
         android:id="@+id/regDateStart"
         android:layout_width="205dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:focusable="false"
         android:hint="Registration Start Date"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/regDateEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventDate" />
+        app:layout_constraintTop_toTopOf="@+id/UIBox" />
 
     <EditText
         android:id="@+id/eventDate"
         android:layout_width="207dp"
         android:layout_height="41dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="11dp"
         android:ems="10"
         android:focusable="false"
         android:hint="Event Date"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/regDateStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventName" />
 
@@ -135,7 +135,7 @@
         android:text="Require Geolocation"
         app:layout_constraintBottom_toTopOf="@+id/uploadPoster"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/participants" />
 
@@ -144,12 +144,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="99dp"
         android:backgroundTint="@color/positive_button_color"
         android:text="Upload Image"
         app:layout_constraintEnd_toEndOf="@+id/UIBox"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="@+id/UIBox"
         app:layout_constraintTop_toBottomOf="@+id/geoRequire" />
 

@@ -90,11 +90,12 @@ public class SignUpFragment extends Fragment {
                 }
 
                 //Check if the fields match the correct formats
-                if (!email.matches("^[a-zA-Z]+@[a-zA-Z]+\\.com$")){
+                if (!email.matches("^[a-zA-Z0-9]+@[a-zA-Z]+\\.com$")) {
                     binding.editEmailReg.setError("Please enter a valid email");
                     binding.editEmailReg.requestFocus();
                     return;
                 }
+
 
                 //Check if the fields match the correct formats
                 if (!name.matches("^[a-zA-Z ]*[a-zA-Z][a-zA-Z ]*$")){

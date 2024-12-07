@@ -1,5 +1,5 @@
 //input validation logic partly derived from Copilot search "make [a requirement that each text field must] have at least one character that is a letter for both fields". 2024 - 11 -22
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails;
 
 import static android.content.ContentValues.TAG;
 
@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.athena.EntrantAndOrganizerFragments.myEventsList;
 import com.example.athena.Firebase.FacilitiesDB;
 import com.example.athena.Firebase.EventsDB;
 import com.example.athena.Firebase.UserDB;
@@ -78,6 +80,7 @@ public class OrgFacilityDetails extends Fragment {
                     DocumentSnapshot facilityDetails = (DocumentSnapshot) getFacilityDetails.getResult();
                     facilityLocation.setText(facilityDetails.getString("facilityLocation"));
                     facilityName.setText(facilityDetails.getString("facilityName"));
+                    facilityID = facilityDetails.getString("facilityID");
                 } else {
                     Exception e = task.getException();
                 }
@@ -260,25 +263,25 @@ public class OrgFacilityDetails extends Fragment {
             Task getEvents = eventsDB.getEventsList();
             getEvents.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
-                public void onComplete(@NonNull Task<QuerySnapshot> task){
-                    if (task.isSuccessful()) {
-                        for(DocumentSnapshot event: task.getResult().getDocuments()) {
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful() && task.getResult() != null) {
+                        for (DocumentSnapshot event : task.getResult().getDocuments()) {
                             String eventName = event.getId();
                             String eventFacility = event.getString("facility");
 
-
-                            if((event.contains("facility")) & eventFacility.equals(facilityID)) {
-                                    eventsDB.deleteSingularEvent(eventName);
-                                }
+                            if (eventFacility != null && eventFacility.equals(facilityID)) {
+                                eventsDB.deleteSingularEvent(eventName);
                             }
-
-
-                        } else{
-                                Exception e = task.getException();
+                        }
+                    } else {
+                        Exception e = task.getException();
+                        if (e != null) {
+                            Log.e("Error", "Task failed: ", e);
+                        } else {
+                            Log.e("Error", "Task failed with unknown error.");
+                        }
                     }
-
                 }
-
             });
 
             displayChildFragment(new myEventsList(), bundle);

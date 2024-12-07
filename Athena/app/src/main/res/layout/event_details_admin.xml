@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/event_card_layout_org_view"
-        android:layout_width="412dp"
+        android:layout_width="match_parent"
         android:layout_height="892dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -66,7 +66,7 @@
         <TextView
             android:id="@+id/event_details_event_desc"
             android:layout_width="match_parent"
-            android:layout_height="83dp"
+            android:layout_height="89dp"
             android:fontFamily="@font/bai_jamjuree_bold"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -96,7 +96,7 @@
         <Button
             android:id="@+id/deleteQrCodeButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/drawer_background_color"
@@ -123,19 +123,20 @@
 
             <ImageView
                 android:id="@+id/qrCodeView"
-                android:layout_width="411dp"
-                android:layout_height="144dp"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                app:layout_constraintBottom_toTopOf="@+id/deleteEventAdmin"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="0dp" />
 
             <Button
                 android:id="@+id/deleteEventAdmin"
-                android:layout_width="220dp"
-                android:layout_height="68dp"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
                 android:backgroundTint="@color/positive_button_color"
-                android:text="Delete"
+                android:text="DELETE EVENT"
                 android:textAllCaps="true"
-                android:textSize="34sp"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"

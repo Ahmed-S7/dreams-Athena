@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/event_poster"
             android:layout_width="match_parent"
-            android:layout_height="152dp" />
+            android:layout_height="180dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
         <TextView
             android:id="@+id/event_details_event_desc"
             android:layout_width="match_parent"
-            android:layout_height="166dp"
+            android:layout_height="150dp"
             android:fontFamily="@font/bai_jamjuree_bold"
             android:textAlignment="center"
             android:textSize="12sp" />
@@ -113,10 +113,10 @@
 
             <Button
                 android:id="@+id/leaveBtn"
-                android:layout_width="192dp"
-                android:layout_height="76dp"
-                android:text="Leave waitlist"
+                android:layout_width="190dp"
+                android:layout_height="71dp"
                 android:backgroundTint="@color/positive_button_color"
+                android:text="Leave waitlist"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

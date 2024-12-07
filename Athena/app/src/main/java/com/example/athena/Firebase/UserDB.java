@@ -128,6 +128,11 @@ public class UserDB {
         db.collection("Users/"+ deviceID +"/Events").document(eventID).update("status","declined");
     }
 
+    public void changeEventStatusCancelled(String eventID, String deviceID){
+        db.collection("Users/"+ deviceID +"/Events").document(eventID).update("status","cancelled");
+    }
+
+
     public Task<QuerySnapshot> getOrganizerEvent(String deviceID){
         Task ueRef = db.collection("Users/" + deviceID + "/OrgEvents").get();
         return ueRef;

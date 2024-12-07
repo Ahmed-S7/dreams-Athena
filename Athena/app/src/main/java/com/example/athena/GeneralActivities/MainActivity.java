@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }else{
-            String deviceID = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+            String deviceID = "2";//Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
 
             db.collection("Users").document(deviceID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override

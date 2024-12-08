@@ -201,21 +201,22 @@ public class ManageEvent extends Fragment implements OrgChooseNumDialog.numOfEnt
         });
 
 
-        //this is temp
+        Button backbtn = view.findViewById(R.id.back_to_event_list);
         Button notifyEntrants = view.findViewById(R.id.notify_entrants_button);
         Button viewInvited = view.findViewById(R.id.view_selected_entrants);
         Button viewCanclled = view.findViewById(R.id.viewCanclledBtn);
         Button viewAccepted = view.findViewById(R.id.viewAcceptedBtn);
-        ImageButton backButton = view.findViewById(R.id.organizer_return_btn);
         ImageButton editEventPicture = view.findViewById(R.id.editEventPicture);
         ImageView eventMap = view.findViewById(R.id.mapImage);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayChildFragment(new ViewMyOrgEvents());
             }
         });
+
 
         notifyEntrants.setOnClickListener(new View.OnClickListener() {
             @Override

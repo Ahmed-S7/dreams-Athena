@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -60,6 +62,9 @@ public class ProfileBrowseOrg extends Fragment {
         usersID = new ArrayList<>();
         eventsDB = new EventsDB();
 
+        TextView toolbar = view.findViewById(R.id.toolbarTitle);
+
+        toolbar.setVisibility(View.GONE);
         listView = view.findViewById(R.id.myEventList);
 
         Task getUserEventList = eventsDB.getEventUserList(eventID,status);

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.athena.ArrayAdapters.EventArrayAdapter;
@@ -68,7 +69,7 @@ public class ViewMyOrgEvents extends Fragment{
         eventsDB = new EventsDB();
         events = new ArrayList<>();
 
-
+        ImageButton homeButton = view.findViewById(R.id.home_from_your_events);
 
         Task getOrgEvents = userDB.getOrganizerEvent(deviceID);
         Task getEventList = eventsDB.getEventsList();
@@ -113,6 +114,7 @@ public class ViewMyOrgEvents extends Fragment{
 
         eventList.setClickable(Boolean.TRUE);
 
+
         eventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -127,6 +129,16 @@ public class ViewMyOrgEvents extends Fragment{
             }
         });
 
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayChildFragment(new myEventsList(),bundle);
+            }
+        });
     }
 
+    public void displayChildFragment(Fragment fragment, Bundle bundle) {
+        fragment.setArguments(bundle);
+        getParentFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
+    }
 }

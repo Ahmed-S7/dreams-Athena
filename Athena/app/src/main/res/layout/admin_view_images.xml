@@ -15,7 +15,7 @@
         android:fontFamily="@font/bai_jamjuree_bold"
         android:gravity="center"
         android:padding="16dp"
-        android:text="Manage Images"
+        android:text="Manage Application Images"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"

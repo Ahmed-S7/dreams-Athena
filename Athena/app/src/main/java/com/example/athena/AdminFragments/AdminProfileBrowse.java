@@ -37,7 +37,7 @@ public class AdminProfileBrowse extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.event_view, container, false);
+        View view = inflater.inflate(R.layout.admin_user_list, container, false);
         super.onCreate(savedInstanceState);
         return view;
     }
@@ -51,7 +51,7 @@ public class AdminProfileBrowse extends Fragment {
         users = new ArrayList<>();
         usersID = new ArrayList<>();
 
-        listView = view.findViewById(R.id.myEventList);
+        listView = view.findViewById(R.id.profiles_list);
 
         Task getUserList = userDB.getUserList();
         getUserList.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

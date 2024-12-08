@@ -22,16 +22,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/facility_details_title_non_edit"
+            android:id="@+id/toolbarTitle"
             android:layout_width="match_parent"
-            android:layout_height="138dp"
+            android:layout_height="wrap_content"
+            android:background="@color/positive_button_color"
             android:fontFamily="@font/bai_jamjuree_bold"
-            android:text="Event Facility Profile"
-            android:textAlignment="center"
-            android:textColor="@color/title_text_color"
-            android:textColorLink="@color/title_text_color"
-            android:textSize="34sp"
-            android:textStyle="bold|italic" />
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Your Facility"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView9"
@@ -142,10 +146,12 @@
                     android:id="@+id/delete_facility_org_button"
                     android:layout_width="27dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="156dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="204dp"
                     android:backgroundTint="@color/mainBackground"
                     android:src="@drawable/delete_facilities_button"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_fac_loc_title"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

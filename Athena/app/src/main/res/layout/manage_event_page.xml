@@ -30,20 +30,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.599"
+            app:layout_constraintVertical_bias="0.584"
             app:srcCompat="@android:drawable/ic_menu_edit"
-            app:tint="@color/black" />
-
-        <ImageButton
-            android:id="@+id/organizer_return_btn"
-            android:layout_width="58dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:background="@null"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_revert"
             app:tint="@color/black" />
 
         <Button
@@ -73,20 +61,21 @@
             app:layout_constraintVertical_bias="0.104" />
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="240dp"
-            android:layout_height="46dp"
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/positive_button_color"
             android:fontFamily="@font/bai_jamjuree_bold"
-            android:text="Manage Event:"
-            android:textAlignment="center"
-            android:textColor="@color/title_text_color"
-            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Manage Event"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018" />
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <!-- Add map image at the bottom -->
 
@@ -126,9 +115,10 @@
             android:text="View Accepted"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.244" />
+            app:layout_constraintVertical_bias="0.247" />
 
         <ImageView
             android:id="@+id/EventPicture"
@@ -142,13 +132,14 @@
 
         <ImageView
             android:id="@+id/mapImage"
-            android:layout_width="409dp"
-            android:layout_height="325dp"
-            android:layout_marginTop="408dp"
+            android:layout_width="410dp"
+            android:layout_height="301dp"
+            android:layout_marginTop="400dp"
             android:contentDescription="Map"
             android:src="@drawable/map_image"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -173,6 +164,37 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.163"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/back_to_event_list"
+            android:layout_width="156dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/negative_button_color"
+            android:text="Back"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
+            app:layout_constraintEnd_toStartOf="@+id/viewAcceptedBtn"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton15"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="118dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp"
+            android:text="Edit Event Poster"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editEventPicture"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EventPicture"
+            app:layout_constraintVertical_bias="0.01" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,18 +7,37 @@
     android:background="@color/mainBackground"
     tools:context=".EntrantAndOrganizerFragments.userViewAttendingEventsFragment">
 
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/positive_button_color"
+        android:fontFamily="@font/bai_jamjuree_bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Your Notifications"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ListView
         android:id="@+id/user_notifications_listview"
-        android:layout_width="406dp"
-        android:layout_height="783dp"
+        android:layout_width="match_parent"
+        android:layout_height="536dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

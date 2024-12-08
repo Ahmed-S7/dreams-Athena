@@ -9,32 +9,47 @@
 
     <LinearLayout
         android:id="@+id/event_card_layout"
-        android:layout_width="407dp"
-        android:layout_height="209dp"
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-6dp">
-
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bai_jamjuree_bold"
-            android:text="Event Name:"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="#020202"
-            android:textSize="26sp"
-            android:textStyle="bold|italic" />
+        tools:layout_editor_absoluteY="-5dp">
 
         <ImageView
             android:id="@+id/userImage"
-            android:layout_width="match_parent"
-            android:layout_height="144dp"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
             android:paddingStart="0dp"
             android:paddingTop="0dp"
             app:srcCompat="@drawable/back_to_home_button"
             tools:srcCompat="@drawable/events_calendar_holo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="225dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="204dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="36dp"
+                android:fontFamily="monospace"
+                android:text="Event Name:"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#1D1A1A"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.581" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

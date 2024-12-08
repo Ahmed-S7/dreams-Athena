@@ -3,7 +3,7 @@ package com.example.athena;
 import androidx.fragment.app.testing.FragmentScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.example.athena.EntrantAndOrganizerFragments.ProfileBrowseOrg;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.ProfileBrowseOrg;
 import com.example.athena.Firebase.eventsDB;
 import com.example.athena.Firebase.userDB;
 import com.google.android.gms.tasks.Task;

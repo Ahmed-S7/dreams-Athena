@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.NotisAndHomeScreen;
 
 import android.os.Bundle;
 
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 *It handles displaying a list of events where the user has been invited,
 *allowing them to either accept or decline the invitation.
  */
-public class UserViewAttendingEventsFragment extends Fragment{
+public class EntrantEventInvites extends Fragment{
 
     public ListView invites;
     private UserInviteArrayAdapter adapter;

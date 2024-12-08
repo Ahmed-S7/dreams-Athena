@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails;
 
 import android.app.AlertDialog;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.JoiningEvent;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 /**

@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.ProfileDetails;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.example.athena.Firebase.UserDB;
 import com.example.athena.Models.User;
 import com.example.athena.R;
-import com.example.athena.databinding.ProfileScreenBinding;
 import com.example.athena.databinding.ProfileScreenEditBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

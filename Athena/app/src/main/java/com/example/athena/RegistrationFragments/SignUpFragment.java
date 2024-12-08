@@ -10,10 +10,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 //import com.example.athena.EntrantAndOrganizerActivities.entrantAndOrganizerHomeActivity;
-import com.example.athena.EntrantAndOrganizerFragments.HomeScreen;
+import com.example.athena.EntrantAndOrganizerFragments.NotisAndHomeScreen.HomeScreen;
 import com.example.athena.R;
 import com.example.athena.databinding.SignUpFragmentBinding;
 import com.google.firebase.firestore.FirebaseFirestore;

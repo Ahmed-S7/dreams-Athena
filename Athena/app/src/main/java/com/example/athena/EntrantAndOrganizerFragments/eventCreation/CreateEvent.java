@@ -5,7 +5,7 @@
  */
 package com.example.athena.EntrantAndOrganizerFragments.eventCreation;
 
-import static com.example.athena.EntrantAndOrganizerFragments.ViewProfileFragment.PICK_IMAGE_REQUEST;
+import static com.example.athena.EntrantAndOrganizerFragments.ProfileDetails.ViewProfileFragment.PICK_IMAGE_REQUEST;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -29,9 +29,8 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.athena.EntrantAndOrganizerFragments.EventDetails;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.EventDetails;
 import com.example.athena.Firebase.EventsDB;
-import com.example.athena.Firebase.ImageDB;
 import com.example.athena.Firebase.UserDB;
 import com.example.athena.Models.Event;
 import com.example.athena.Models.QRCode;

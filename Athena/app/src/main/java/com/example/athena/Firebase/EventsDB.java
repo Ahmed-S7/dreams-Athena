@@ -11,8 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 
-import com.example.athena.EntrantAndOrganizerFragments.JoinEventDetails;
-import com.example.athena.EntrantAndOrganizerFragments.myEventsList;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.myEventsList;
 import com.example.athena.Models.Event;
 import com.example.athena.R;
 import com.google.android.gms.tasks.Continuation;

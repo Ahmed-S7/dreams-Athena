@@ -1,24 +1,20 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
-import com.example.athena.Firebase.EventsDB;
-import com.example.athena.Firebase.UserDB;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.example.athena.ArrayAdapters.EventArrayAdapter;
+import com.example.athena.Firebase.EventsDB;
+import com.example.athena.Firebase.UserDB;
 import com.example.athena.Models.Event;
 import com.example.athena.R;
-import com.example.athena.databinding.OrganizerMyEventsViewBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -31,36 +27,23 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * This fragment displays the list of events created by the organizer and allows navigation to event details.
- * It fetches events from Firestore and displays them using a custom adapter.
+ * This fragment class represents the details of a specific event within the application.
  */
-public class ViewMyOrgEvents extends Fragment{
-
-    private ListView eventList;
-    private EventArrayAdapter eventAdapter;
-    private ArrayList<Event> events;
+ public class myEventsList extends Fragment {
     private String deviceID;
-    public UserDB userDB;
-    public EventsDB eventsDB;
-    OrganizerMyEventsViewBinding binding;
+    private UserDB userDB;
+    private EventsDB eventsDB;
+    private ArrayList<Event> events;
+    private ListView listView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.organizer_my_events_view, container, false);
-        ///Put database here
-        eventList = view.findViewById(R.id.organizer_event_listview);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.event_view, container, false);
         super.onCreate(savedInstanceState);
-        ///Inflates the layout for the fragment
         return view;
-
     }
 
-
-
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated (@NonNull View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         Bundle bundle = getArguments();
         assert bundle != null;
@@ -69,20 +52,19 @@ public class ViewMyOrgEvents extends Fragment{
         eventsDB = new EventsDB();
         events = new ArrayList<>();
 
-        ImageButton homeButton = view.findViewById(R.id.home_from_your_events);
-
-        Task getOrgEvents = userDB.getOrganizerEvent(deviceID);
+        listView = view.findViewById(R.id.myEventList);
+        Task getUserEvents = userDB.getUserEvents(deviceID);
         Task getEventList = eventsDB.getEventsList();
 
-        Task eventsLoaded = Tasks.whenAll(getOrgEvents, getEventList);
+        Task eventsLoaded = Tasks.whenAll(getUserEvents, getEventList);
         eventsLoaded.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 EventArrayAdapter eventAdapter = new EventArrayAdapter(getContext(), events);
-                eventList.setAdapter(eventAdapter);
+                listView.setAdapter(eventAdapter);
 
                 if (task.isSuccessful()) {
-                    QuerySnapshot userEvents = (QuerySnapshot) getOrgEvents.getResult();
+                    QuerySnapshot userEvents = (QuerySnapshot) getUserEvents.getResult();
                     List<String> userEventList = new ArrayList<>();
 
                     for (Iterator<DocumentSnapshot> it = userEvents.getDocuments().iterator(); it.hasNext(); ) {
@@ -96,8 +78,8 @@ public class ViewMyOrgEvents extends Fragment{
                         if (userEventList.contains(document.getId())) {
                             String eventName = document.getString("eventName");
                             String imageURL = document.getString("imageURL");
-                            int maxParticipants = Math.toIntExact((Long) document.get("maxParticipants"));
-                            Event currentEvent = new Event(eventName, imageURL, document.getId(), maxParticipants);
+                            String eventID = document.getString("eventID");
+                            Event currentEvent = new Event(eventName, imageURL, eventID);
                             events.add(currentEvent);
                         }
                     }
@@ -109,36 +91,24 @@ public class ViewMyOrgEvents extends Fragment{
             }
         });
 
-        eventAdapter = new EventArrayAdapter(getContext(), events);
-        eventList.setAdapter(eventAdapter);
-
-        eventList.setClickable(Boolean.TRUE);
-
-
-        eventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String eventID = eventAdapter.getItem(position).getEventID();
-                ManageEvent detailFrag = new ManageEvent();
-                bundle.putString("eventID",eventID);
-                detailFrag.setArguments(bundle);
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.content_frame, detailFrag)
-                        .commit();
+                Event event = (Event) parent.getAdapter().getItem(position);
+                String eventID = event.getEventID();
 
+                Bundle eventDetails = new Bundle();
+                eventDetails.putString("eventID", eventID);
+                eventDetails.putString("deviceID", deviceID);
+                displayChildFragment(new EventDetails(), eventDetails);
             }
         });
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayChildFragment(new myEventsList(),bundle);
-            }
-        });
     }
-
     public void displayChildFragment(Fragment fragment, Bundle bundle) {
         fragment.setArguments(bundle);
         getParentFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
     }
+
 }
+

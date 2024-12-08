@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.NotisAndHomeScreen;
 
 import static android.content.ContentValues.TAG;
 
@@ -22,6 +22,11 @@ import android.widget.Toast;
 import com.example.athena.AdminFragments.AdminBrowseFacilities;
 import com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails.CreateFacility;
 import com.example.athena.EntrantAndOrganizerFragments.FacilityRelatedDetails.OrgFacilityDetails;
+import com.example.athena.EntrantAndOrganizerFragments.JoiningEvent.CaptureAct;
+import com.example.athena.EntrantAndOrganizerFragments.JoiningEvent.JoinEventDetails;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.ViewMyOrgEvents;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.myEventsList;
+import com.example.athena.EntrantAndOrganizerFragments.ProfileDetails.ViewProfileFragment;
 import com.example.athena.EntrantAndOrganizerFragments.eventCreation.CreateEvent;
 import com.example.athena.Firebase.UserDB;
 import com.example.athena.AdminFragments.AdminProfileBrowse;
@@ -232,7 +237,7 @@ public class HomeScreen extends Fragment {
             @Override
             public void onClick(View view) {
                 appDrawer.setVisibility(View.GONE);
-                displayChildFragment(new UserViewAttendingEventsFragment(), bundle);
+                displayChildFragment(new EntrantEventInvites(), bundle);
             }
         });
 

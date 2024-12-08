@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.example.athena.EntrantAndOrganizerFragments.ManageEvent;
-import com.example.athena.EntrantAndOrganizerFragments.OrgChooseNumDialog;
+import com.example.athena.EntrantAndOrganizerFragments.eventCreation.ManageEvent;
+import com.example.athena.EntrantAndOrganizerFragments.eventCreation.OrgChooseNumDialog;
 import com.example.athena.Firebase.eventsDB;
 import com.example.athena.Firebase.userDB;
 import com.example.athena.Models.Event;

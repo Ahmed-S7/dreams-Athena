@@ -6,7 +6,7 @@ import androidx.fragment.app.testing.FragmentScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.espresso.intent.Intents;
 
-import com.example.athena.EntrantAndOrganizerFragments.ManageEvent;
+import com.example.athena.EntrantAndOrganizerFragments.eventCreation.ManageEvent;
 import com.example.athena.Firebase.eventsDB;
 import com.example.athena.Firebase.userDB;
 

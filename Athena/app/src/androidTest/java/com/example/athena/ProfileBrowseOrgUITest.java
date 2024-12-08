@@ -6,16 +6,12 @@ import androidx.fragment.app.testing.FragmentScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.espresso.intent.Intents;
 
-import com.example.athena.EntrantAndOrganizerFragments.ProfileBrowseOrg;
-import com.example.athena.R;
-import com.example.athena.Models.User;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.ProfileBrowseOrg;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.util.ArrayList;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;

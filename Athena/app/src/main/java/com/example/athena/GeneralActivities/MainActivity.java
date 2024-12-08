@@ -1,14 +1,11 @@
 package com.example.athena.GeneralActivities;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.Manifest;
 import android.provider.Settings;
-import android.util.Log;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -18,7 +15,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.athena.EntrantAndOrganizerFragments.HomeScreen;
+import com.example.athena.EntrantAndOrganizerFragments.NotisAndHomeScreen.HomeScreen;
 
 import com.example.athena.R;
 import com.example.athena.RegistrationFragments.SignUpFragment;

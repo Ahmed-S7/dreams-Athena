@@ -2,25 +2,14 @@ package com.example.athena;
 
 import androidx.fragment.app.testing.FragmentScenario;
 import androidx.test.espresso.Espresso;
-import androidx.fragment.app.testing.FragmentScenario;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.espresso.Espresso;
 import androidx.test.espresso.assertion.ViewAssertions;
-import androidx.test.espresso.matcher.ViewMatchers;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import com.example.athena.R;
-import com.example.athena.EntrantAndOrganizerFragments.profileScreenEditFragment;
+import com.example.athena.EntrantAndOrganizerFragments.ProfileDetails.profileScreenEditFragment;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.matcher.ViewMatchers.*;
-import androidx.test.espresso.assertion.ViewAssertions;
-
-import com.example.athena.EntrantAndOrganizerFragments.profileScreenEditFragment;
-
-import org.junit.Test;
 
 public class ProfileEditNotifTest {
     @Test

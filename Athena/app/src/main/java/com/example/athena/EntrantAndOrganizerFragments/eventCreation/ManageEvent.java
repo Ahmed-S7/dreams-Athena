@@ -1,7 +1,7 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.eventCreation;
 
 import static android.app.Activity.RESULT_OK;
-import static com.example.athena.EntrantAndOrganizerFragments.ViewProfileFragment.PICK_IMAGE_REQUEST;
+import static com.example.athena.EntrantAndOrganizerFragments.ProfileDetails.ViewProfileFragment.PICK_IMAGE_REQUEST;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.ProfileBrowseOrg;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.ViewMyOrgEvents;
 import com.example.athena.Firebase.EventsDB;
 import com.example.athena.Firebase.ImageDB;
 import com.example.athena.Firebase.UserDB;

@@ -20,7 +20,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.athena.EntrantAndOrganizerFragments.myEventsList;
+import com.example.athena.EntrantAndOrganizerFragments.OrganizeEventDetails.myEventsList;
 import com.example.athena.Firebase.FacilitiesDB;
 import com.example.athena.Firebase.EventsDB;
 import com.example.athena.Firebase.UserDB;

@@ -1,4 +1,4 @@
-package com.example.athena.EntrantAndOrganizerFragments;
+package com.example.athena.EntrantAndOrganizerFragments.ProfileDetails;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,12 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.example.athena.EntrantAndOrganizerFragments.NotisAndHomeScreen.HomeScreen;
 import com.example.athena.Firebase.ImageDB;
 import com.example.athena.Firebase.UserDB;
 import com.example.athena.Models.User;

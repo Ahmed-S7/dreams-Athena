@@ -4,19 +4,15 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.intent.Intents.intended;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.mockito.Mockito.*;
-import androidx.test.espresso.intent.Intents;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.rule.ActivityTestRule;
 
 import androidx.fragment.app.testing.FragmentScenario;
 
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-
 import com.example.athena.EntrantAndOrganizerFragments.profileNotiEditFragment;
-import com.example.athena.EntrantAndOrganizerFragments.profileScreenEditFragment;
+import com.example.athena.EntrantAndOrganizerFragments.ProfileDetails.profileScreenEditFragment;
 import com.example.athena.EntrantAndOrganizerFragments.viewProfileFragment;
 import com.example.athena.Firebase.imageDB;
 import com.example.athena.Firebase.userDB;

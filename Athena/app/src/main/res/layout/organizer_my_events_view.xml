@@ -44,6 +44,7 @@
         android:layout_marginBottom="11dp"
         android:backgroundTint="@color/positive_button_color"
         android:src="@drawable/back_to_home_button"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

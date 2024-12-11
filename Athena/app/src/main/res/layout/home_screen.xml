@@ -49,18 +49,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.004" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="487dp"
-            android:layout_height="84dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.998"
-            app:srcCompat="@drawable/bottombarcoloring" />
-
 
         <ImageButton
             android:id="@+id/profile_picture_button"
@@ -115,12 +103,43 @@
 
 
 
+
+
+
+
             ]]>
 
             <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="453dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/bottombarcoloring" />
+
+            <ImageButton
+                android:id="@+id/check_events_button"
+                android:layout_width="127dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="288dp"
+                android:backgroundTint="#93BDB6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/checkeventsbutton" />
+
+            <ImageView
                 android:id="@+id/text_addon_non_edit"
-                android:layout_width="97dp"
-                android:layout_height="19dp"
+                android:layout_width="104dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -132,47 +151,30 @@
                 app:srcCompat="@drawable/events_attending_text_addon" />
 
             <ImageButton
-                android:id="@+id/check_events_button"
-                android:layout_width="121dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="288dp"
-                android:backgroundTint="#93BDB6"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.976"
-                app:srcCompat="@drawable/checkeventsbutton" />
-
-            <ImageButton
                 android:id="@+id/check_updates_button"
-                android:layout_width="116dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="669dp"
+                android:layout_width="114dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:backgroundTint="#93BDB6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/scan_qr_code_button"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.812"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:srcCompat="@drawable/updatesbuttonimage" />
 
             <ImageButton
                 android:id="@+id/scan_qr_code_button"
-                android:layout_width="124dp"
+                android:layout_width="127dp"
                 android:layout_height="81dp"
                 android:backgroundTint="#93BDB6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.51"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.994"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/final_qr_code_button" />
 
             <LinearLayout

@@ -130,12 +130,10 @@
         android:id="@+id/geoRequire"
         android:layout_width="132dp"
         android:layout_height="51dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="12dp"
         android:text="Require Geolocation"
-        app:layout_constraintBottom_toTopOf="@+id/uploadPoster"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/participants" />
 
@@ -146,12 +144,15 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="99dp"
+        android:layout_marginBottom="178dp"
         android:backgroundTint="@color/positive_button_color"
         android:text="Upload Image"
+        app:layout_constraintBottom_toTopOf="@+id/createEventButton"
         app:layout_constraintEnd_toEndOf="@+id/UIBox"
-        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="@+id/UIBox"
-        app:layout_constraintTop_toBottomOf="@+id/geoRequire" />
+        app:layout_constraintTop_toBottomOf="@+id/geoRequire"
+        app:layout_constraintVertical_bias="0.066" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

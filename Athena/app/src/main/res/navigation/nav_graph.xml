@@ -8,7 +8,7 @@
         android:id="@+id/entrantAndOrganizerHomeFragment"
         android:name="com.example.athena.EntrantAndOrganizerFragments.homeScreen"
         android:label="ent_and_org_home_fragment"
-        tools:layout="@layout/ent_and_org_home_fragment" >
+        tools:layout="@layout/home_screen" >
         <action
             android:id="@+id/action_entrantAndOrganizerHomeFragment_to_viewMyCreatedEventsFragment"
             app:destination="@id/viewMyCreatedEventsFragment" />

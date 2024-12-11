@@ -44,11 +44,6 @@
           <theme>@style/Theme.Athena</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/Athena/app/src/main/res/layout/ent_and_org_home_fragment.xml">
-        <config>
-          <theme>@style/Theme.Athena</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/Athena/app/src/main/res/layout/event_clicked_by_user_page.xml">
         <config>
           <theme>@style/Theme.Athena</theme>
@@ -95,6 +90,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/Athena/app/src/main/res/layout/grid_item_image.xml">
+        <config>
+          <theme>@style/Theme.Athena</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/Athena/app/src/main/res/layout/home_screen.xml">
         <config>
           <theme>@style/Theme.Athena</theme>
         </config>
@@ -216,26 +216,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4ab5dda-57b0-426c-a0f8-f381a12beb0c" name="Changes" comment="notifiation service now grabs new notifications on app start">
-      <change afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_user_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Athena/app/src/main/res/font/albert_sans_thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Athena/app/src/main/res/font/allerta_stencil.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/AdminFragments/AdminProfileBrowse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/AdminFragments/AdminProfileBrowse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ManageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ManageEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ProfileBrowseOrg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ProfileBrowseOrg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ViewMyOrgEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/ViewMyOrgEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/myEventsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/myEventsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/GeneralActivities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/GeneralActivities/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_events_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_events_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_facilities_browse.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_facilities_browse.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/NotisAndHomeScreen/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/java/com/example/athena/EntrantAndOrganizerFragments/NotisAndHomeScreen/HomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_user_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_user_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_view_images.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/admin_view_images.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/ent_and_org_home_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/ent_and_org_home_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/create_event.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/create_event.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/ent_and_org_home_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/home_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/event_list_item_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/event_list_item_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/event_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/event_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/facility_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/facility_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/loading_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/loading_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/manage_event_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/manage_event_page.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/organizer_my_events_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/organizer_my_events_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/user_my_notis_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/user_my_notis_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/user_view_events_attending_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/layout/user_view_events_attending_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/search_for_event_fragment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/search_for_facility_fragment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/user_view_events_attending_fragment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/waitlist_entrants_to_notify_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/layout/waitlist_notified_entrants_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Athena/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Athena/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +241,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Ahmed\.android\avd\Medium_Phone_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=RZ8N12ESCFK)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/Athena">
       <ProjectState />
@@ -304,7 +300,7 @@
     </scriptDefinition>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="_Designer_Tab" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
